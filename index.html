@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#d9f24a" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <section class="calculator" aria-label="Calculator">
+        <header class="brand">
+          <span class="brand-mark" aria-hidden="true">+</span>
+          <span>CALCULATOR</span>
+          <span class="brand-caption">SIMPLE BY DESIGN</span>
+        </header>
+
+        <section class="display" aria-label="Calculator display">
+          <div class="display-tools">
+            <span class="display-label">YOUR EXPRESSION</span>
+            <button class="copy-button" id="copy-button" type="button" aria-label="Copy result" title="Copy result">
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <rect x="7" y="7" width="9" height="10" rx="1.5"></rect>
+                <path d="M13 7V4.5A1.5 1.5 0 0 0 11.5 3h-7A1.5 1.5 0 0 0 3 4.5v8A1.5 1.5 0 0 0 4.5 14H7"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="expression" id="expression" aria-live="polite">0</div>
+          <div class="result-row">
+            <span class="result-label">RESULT</span>
+            <output class="result" id="result" aria-live="polite">0</output>
+          </div>
+          <p class="status" id="status" role="status" aria-live="polite"></p>
+        </section>
+
+        <div class="keypad" aria-label="Calculator keypad">
+          <button class="key key-clear" type="button" data-action="clear" aria-label="Clear">C</button>
+          <button class="key key-utility" type="button" data-action="delete" aria-label="Delete last character">DEL</button>
+          <button class="key key-utility" type="button" data-value="(" aria-label="Open parenthesis">(</button>
+          <button class="key key-utility" type="button" data-value=")" aria-label="Close parenthesis">)</button>
+
+          <button class="key" type="button" data-value="7">7</button>
+          <button class="key" type="button" data-value="8">8</button>
+          <button class="key" type="button" data-value="9">9</button>
+          <button class="key key-operator" type="button" data-value="/" aria-label="Divide">÷</button>
+
+          <button class="key" type="button" data-value="4">4</button>
+          <button class="key" type="button" data-value="5">5</button>
+          <button class="key" type="button" data-value="6">6</button>
+          <button class="key key-operator" type="button" data-value="*" aria-label="Multiply">×</button>
+
+          <button class="key" type="button" data-value="1">1</button>
+          <button class="key" type="button" data-value="2">2</button>
+          <button class="key" type="button" data-value="3">3</button>
+          <button class="key key-operator" type="button" data-value="-" aria-label="Subtract">−</button>
+
+          <button class="key key-utility" type="button" data-value="%">%</button>
+          <button class="key key-zero" type="button" data-value="0">0</button>
+          <button class="key" type="button" data-value=".">.</button>
+          <button class="key key-operator" type="button" data-value="+" aria-label="Add">+</button>
+
+          <button class="key key-equals" type="button" data-action="equals">=</button>
+        </div>
+
+        <section class="history" aria-label="Calculation history">
+          <div class="history-heading">
+            <h2>HISTORY</h2>
+            <button class="history-clear" id="history-clear" type="button">CLEAR</button>
+          </div>
+          <ol class="history-list" id="history-list">
+            <li class="history-empty">Your calculations will appear here.</li>
+          </ol>
+        </section>
+        <footer class="footer-hint">Use your keyboard or tap the keys</footer>
+      </section>
+      <span class="decoration decoration-circle" aria-hidden="true"></span>
+      <span class="decoration decoration-diamond" aria-hidden="true"></span>
+      <span class="decoration decoration-plus" aria-hidden="true">+</span>
+    </main>
+  </body>
+</html>
